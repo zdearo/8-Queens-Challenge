@@ -142,5 +142,7 @@ function isBlocked() {
 }
 
 function clearBlockedSquares() {
-  blockedSquares.length = 0;
+  blockedSquares.forEach(function(square) {
+    square.classList.remove('blocked');
+  });
 }
