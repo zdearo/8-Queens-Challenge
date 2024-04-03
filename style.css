@@ -1,0 +1,82 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5vw;
+}
+
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: antiquewhite;
+}
+
+.chessboard {
+  border: 1px solid #a19e9c;
+  width: 40vw;
+  height: 40vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.square{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.white {
+  background-color: #b2a9a0;
+}
+
+.black {
+  background-color: #eee9e6;
+}
+
+.blocked::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 25%;
+}
+
+.queen{
+  width: 70%;
+}
+
+.queen img{
+  width: 100%;
+  height: 100%;
+}
+
+#easy-btn{
+  font-size: 0.8em;
+  color: white;
+  cursor: pointer;
+  margin: 0.5vw;
+  border: none;
+  padding: 4px 16px;
+  border-radius: 10px;
+}
+
+#easy-btn.on{
+  background-color: green;
+}
+
+#easy-btn.off{
+  background-color: red;
+}
